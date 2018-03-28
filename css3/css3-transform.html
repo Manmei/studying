@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3动画</title>
+    <style>
+	*{color:#fff}
+        body,figure,figcaption,h2,p,img { margin: 0;left: 0; }
+        figure { position: relative;float:left;width: 33.33%;height: 350px;overflow: hidden; }
+        figcaption { position: absolute;top:0;left:0;color: #fff;}
+        figure img {
+            width: 120%;
+            opacity: 0.8;
+            transition: all 0.35s;
+        }
+        figcaption p,h2,span,div,figure {
+            transition: all 0.35s;
+        }
+        @media screen and (max-width: 600px) {
+            figure{ width: 100% }
+        }
+        @media screen and (min-width: 601px) and (max-width: 1000px){
+            figure { width: 50% }
+        }
+        @media screen and (min-width: 1000px) {
+            figure{ width: 33.33% }
+        }
+        .test1 {
+            background: #2f0000;
+        }
+        .test1 figcaption {
+            padding: 20px;
+        }
+        .test1 figcaption p {
+            background: #fff;
+            color: #333;
+            margin: 5px;
+            text-align: center;
+            transform: translate(-220px,0);
+        }
+        .test1:hover figcaption p {
+            transform: translate(0,0);
+        }
+        .test1 figcaption p:nth-of-type(1) {
+            transition-delay: 0.05s;
+        }
+        .test1 figcaption p:nth-of-type(2) {
+            transition-delay: 0.1s;
+        }
+        .test1 figcaption p:nth-of-type(3) {
+            transition-delay: 0.15s;
+        }
+        .test1 img:hover {
+            transform: translate(-50px,0);
+        }
+        .test2 {
+            background: #15c0e2;
+        }
+        .test2 figcaption {
+            width: 100%;
+            height: 100%;
+        }
+        .test2 figcaption div {
+            width: 70%;
+            height: 70%;
+            border: 3px solid #fff;
+            position: absolute;
+            top: 22%;
+            left: 14%;
+            opacity: 0.8;
+            transform: translate(0,-340px);
+        }
+        .test2:hover figcaption div {
+            transform: translate(0,0) rotate(180deg);
+        }
+        .test2:hover img {
+            opacity: 0.5;
+        }
+        .test2 figcaption p {
+            margin: 2% 0 0 17%;
+            transform: translate(0,-90px);
+            opacity: 0;
+        }
+        .test2:hover figcaption p {
+            transform: translate(0,0);
+            opacity: 1;
+        }
+        .test2 figcaption h2 {
+            margin: 17% 0 0 17%;
+        }
+        .test3 {
+            background: #fbb29d;
+        }
+        .test3 figcaption {
+            top: 30%;
+            left: 15%;
+            color: #333;
+        }
+        .test3:hover img {
+            opacity: .5;
+        }
+        .test3 figcaption p {
+            transition-delay: .15s;
+        }
+        .test3:hover figcaption h2 {
+            transform: skew(360deg);
+        }
+        .test3:hover figcaption p {
+            transform: skew(360deg);
+        }
+        .test4 {
+            background: red;
+        }
+        .test4 figcaption {
+            top: 20%;
+            left: 15%;
+            color: #333;
+        }
+        .test4 figcaption {
+            width: 100%;
+            height: 100%;
+            color: red;
+        }
+        .test4 figcaption h2 {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+        .test4 figcaption p {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+        .test4 figcaption div {
+            width: 70%;
+            height: 70%;
+            border: 3px solid #fff;
+            position: absolute;
+            top: -10%;
+            left: -4%;
+            opacity: 0;
+            transform: scale(1.2);
+        }
+        .test4:hover figcaption div {
+            opacity: 0.8;
+            transform: scale(1);
+        }
+        .test4:hover figcaption h2 {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .test4:hover figcaption p {
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+	<script>
+		alert(111);
+	</script>
+</head>
+<body>
+<figure class="test1">
+    <img src="http://seopic.699pic.com/photo/50045/9518.jpg_wh1200.jpg" alt="无效果">
+    <figcaption>
+        <h2>图片标题--平移</h2>
+        <p>图片注解111</p>
+        <p>图片注解222</p>
+        <p>图片注解333</p>
+    </figcaption>
+</figure>
+<figure class="test2">
+    <img src="http://seopic.699pic.com/photo/50030/1162.jpg_wh1200.jpg" alt="">
+    <figcaption>
+        <h2>图片标题--旋转</h2>
+        <p>图片注解</p>
+        <div></div>
+    </figcaption>
+</figure>
+<figure class="test3">
+    <img src="http://seopic.699pic.com/photo/50017/7109.jpg_wh1200.jpg" alt="">
+    <figcaption>
+        <h2>斜切动画title</h2>
+        <p>斜切动画title图片注解</p>
+    </figcaption>
+</figure>
+<figure class="test4">
+    <img src="http://seopic.699pic.com/photo/50011/4253.jpg_wh1200.jpg" alt="">
+    <figcaption>
+        <h2>图片标题--缩放</h2>
+        <p>图片注解</p>
+        <div></div>
+    </figcaption>
+</figure>
+<figure class="test3">
+    <img src="http://seopic.699pic.com/photo/50053/1406.jpg_wh1200.jpg" alt="">
+    <figcaption>
+        <h2>图片标题--斜切</h2>
+        <p>图片注解</p>
+    </figcaption>
+</figure>
+<figure class="test4">
+    <img src="http://seopic.699pic.com/photo/50035/3021.jpg_wh1200.jpg" alt="">
+    <figcaption>
+        <h2>图片标题--</h2>
+        <p>图片注解</p>
+        <div></div>
+    </figcaption>
+</figure>
+<ul style="margin-top:20px;">
+	<li>
+		<label><input type="radio" name="xingbie1" checked>男</label>
+		<label><input type="radio" name="xingbie1">女</label>
+	</li>
+	<li>
+		<label><input type="radio" name="xingbie2" checked>男</label>
+		<label><input type="radio" name="xingbie2">女</label>
+	</li>
+	<li>
+		<label><input type="radio" name="xingbie3">男</label>
+		<label><input type="radio" name="xingbie3" checked>女</label>
+	</li>
+	<li>
+		<label><input type="radio" name="xingbie4">男</label>
+		<label><input type="radio" name="xingbie4" checked>女</label>
+	</li>
+</ul>
+
+</body>
+</html>
